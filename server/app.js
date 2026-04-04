@@ -16,6 +16,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+
 app.use("/api/profile", profileRoutes);
 // Test route
 app.get("/", (req, res) => {

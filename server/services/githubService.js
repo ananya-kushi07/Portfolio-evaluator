@@ -1,12 +1,12 @@
 import { Octokit } from "@octokit/rest";
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN, // optional but recommended
+  auth: process.env.GITHUB_TOKEN, 
 });
 
 export const getGitHubProfile = async (username) => {
   try {
-    // 1. Get user profile
+    
     const { data: user } = await octokit.users.getByUsername({
       username,
     });
